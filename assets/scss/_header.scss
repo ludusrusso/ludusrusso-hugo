@@ -1,0 +1,65 @@
+header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom: 1px solid $border-color;
+
+    .title, .menu-item {
+        height: 60px;
+        padding: 0 12px;
+        vertical-align: middle;
+        display: flex;
+        align-items: center;
+        a {
+            text-decoration: none;
+            color: $text-color;
+        }
+    }
+
+    .title > a {
+        font-weight: bold;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &.header-hide {
+            display: none !important
+        }
+
+    }
+
+    #header-display {
+        position: absolute;
+        top: 20px;
+        right: 12px;
+
+        border: none;
+        i {
+            font-size: 20px;
+        }
+        color: #ccc;
+    }
+}
+
+@media screen and (min-width: $break-small) {
+    header {
+        flex-direction: row;
+
+        .menu {
+            flex-direction: row;
+            &.header-hide {
+                display: flex !important
+            }
+        }
+
+        #header-display {
+            display: none !important;
+        }
+    }
+}

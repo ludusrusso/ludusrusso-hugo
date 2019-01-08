@@ -1,0 +1,7 @@
+<a class="post-preview" href="{{.Permalink}}">
+    {{ if  .Params.image }}
+        <img src="{{ .Params.image }}" alt="{{ .Title }}">
+    {{ end }}
+    <h1>{{ .Title }}</h1>
+    <p> {{ .Params.description }}</p>
+</a>

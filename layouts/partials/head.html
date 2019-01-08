@@ -1,0 +1,12 @@
+{{ $style := resources.Get "scss/main.scss" | toCSS | minify | fingerprint }}
+
+{{ $fontAwesomeSass := resources.Get "vendors/fontawesome/css/all.css" | toCSS | minify | fingerprint }}
+
+<link rel="stylesheet" href="{{ $style.Permalink }}">
+<link rel="stylesheet" href="{{ $fontAwesomeSass.Permalink }}">
+
+{{ $jQuery := resources.Get "vendors/jquery-3.3.1.js" }}
+{{ $HeaderJs := resources.Get "js/header.js" }}
+{{ $globalJS := slice  $jQuery $HeaderJs | resources.Concat "js/global.js" }}
+
+<script src="{{ $globalJS.Permalink }}" integrity="{{ $globalJS.Data.Integrity }}"></script>

@@ -1,0 +1,7 @@
+{{ define "main" }}
+    <div class="post-preview-list">
+        {{ range .Pages}}
+        {{- partial "post-preview.html" . -}}
+        {{ end }}
+    </div>
+{{ end }}

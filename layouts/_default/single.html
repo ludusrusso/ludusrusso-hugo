@@ -1,0 +1,16 @@
+{{ define "main" }}
+    <div class="post">
+        <h1 class="title"> {{ .Title }}</h1>
+        <p class="description"> {{ .Params.description }}</p>
+
+        {{ if .Params.image }}
+        <img src="{{ .Params.image }}" alt="prova">
+        {{ end }}
+
+        <main>
+            {{ .Content }}
+        </main>
+    </div>
+
+
+{{ end }}

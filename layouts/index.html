@@ -1,0 +1,19 @@
+{{ define "main" }}
+
+<section class="main">
+    <h1>Dr.ssa Elisa Nescis</h1>
+    <h4>Esperta in Ematologia</h4>
+    <a role="button" href="mailto:elisa@nescis.eu"> Prenota una visita</a>
+</section>
+
+<section class="blog">
+    {{ range where .Pages "Section" "post" }}
+        <div class="post-preview">
+            <h1>{{ .Title }}</h1>
+            <p> {{ .Description }}</p>
+            <a href="{{ .Permalink }}">Continua a leggere >> </a>
+        </div>
+    {{ end }}
+</section>
+
+{{ end }}

@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import "breaks.scss";
+@import "colors.scss";
+@import "header.scss";
+@import "footer.scss";
+@import "post-preview.scss";
+@import "post.scss";
+@import "index.scss";
+
+body {
+    color: $text-color;
+    font-family: 'Montserrat', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.hide {
+    display:none !important;
+}

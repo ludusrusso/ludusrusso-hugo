@@ -1,0 +1,38 @@
+section.main {
+    
+    background: url('/img/preview.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 400px;
+    padding: 40px;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    font-size: 200%;
+
+    a {
+        text-decoration: none;
+        background-color: #eeeeee;
+        padding: 20px 40px;
+        color: black;
+        border-radius: 99999px;
+        font-size: 20px;
+    }
+
+    h1 {
+        padding: 0;
+        margin: 0;
+    }
+}
+
+section.blog {
+    max-width: $content-width;
+    margin: auto;
+    padding: 20px;
+}

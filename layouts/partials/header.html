@@ -1,0 +1,15 @@
+<header>
+    <div class="title">
+        <a href="/"> {{ .Site.Title }}</a>
+    </div>
+
+    <div class="menu header-hide" id="menu">
+        {{ range .Site.Menus.main }}
+        <div class="menu-item">
+            <a class="menu-item" href="{{ .URL }}">{{ .Name }}</a>
+        </div>
+        {{ end }}
+    </div>
+
+    <button id="header-display" onclick="toggleHeader()"> <i class="fa fa-bars"></i></button>
+</header>
